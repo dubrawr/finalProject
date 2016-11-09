@@ -1,8 +1,25 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+#body-display {background-color: #323232;}
+
+
+li > a { color: #323232;}
+li>a:hover {color: black;}
+
+.left {
+    position:absolute;
+    left:0; top: 0; bottom: 0;
+    width: 178px;
+    background-color: #e2ff88;
+    color: #323232;
+    font-style: Roboto, Helvetica, sans-serif;
 }
 
-a {
-  color: #00B7FF;
+.main {
+    position: absolute;
+    left:178px; top:92px; right:0; bottom:0;
 }
+
+.home {text-align: center;}
+
+.homeButtons {display: block; color: #e2ff88;}
+
+.submitButton {background-color: ;}
