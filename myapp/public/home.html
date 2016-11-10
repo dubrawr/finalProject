@@ -1,38 +1,38 @@
 <div class="home">
-<img src="./images/mixtape.png">
-<div class="homeButtons" ng-click="showLogin()">login</div>
-<div class="homeButtons" ng-click="showRegister()">register</div>
+  <div class="mixtape">
+    <img src="./images/mixtape.png">
+    <div class="homeButtons floatLeft loginButton" ng-click="showLogin()">login</div>
+    <div class="homeButtons floatRight registerButton" ng-click="showRegister()">register</div>
+    <div ng-if="login">
+      <form class="form clear" ng-submit="login()">
+        <div class="form-group">
 
-<div ng-if="login">
-  <form class="form" ng-submit="login()">
-    <div class="form-group">
-      
-      <input type="text" size="40" placeholder="Username" name="username" ng-model="loginForm.username" required>
+          <input type="text" size="20" placeholder="Username" name="username" ng-model="loginForm.username" required>
+        </div>
+        <div class="form-group">
+
+          <input type="password" size="20" placeholder="Password" name="password" ng-model="loginForm.password" required>
+        </div>
+        <div>
+          <button type="submit" class="btn" ng-disabled="disabled">SUBMIT</button>
+        </div>
+      </form>
     </div>
-    <div class="form-group">
-      
-        <input type="password" size="40" placeholder="Password" name="password" ng-model="loginForm.password" required>
-      </div>
-      <div>
-        <button type="submit" class="btn" ng-disabled="disabled">SUBMIT</button>
-      </div>
-  </form>
-</div>
 
-<div ng-if="register">
-  <form class="form" ng-submit="register()">
-    <div class="form-group">
-      
-      <input type="text" size="20" placeholder="Username" name="username" ng-model="register.username" required>
+    <div ng-if="register">
+      <form class="form clear floatRight" ng-submit="register()">
+        <div class="form-group">
+
+          <input type="text" size="20" placeholder="Username" name="username" ng-model="register.username" required>
+        </div>
+        <div class="form-group">
+
+          <input type="password" size="20" placeholder="Password" name="password" ng-model="register.password" required>
+        </div>
+        <div>
+          <button class="floatRight" type="submit" class="btn" ng-disabled="disabled">SUBMIT</button>
+        </div>
+      </form>
     </div>
-    <div class="form-group">
-      
-        <input type="password" size="20" placeholder="Password" name="password" ng-model="register.password" required>
-      </div>
-      <div>
-        <button type="submit" class="btn" ng-disabled="disabled">SUBMIT</button>
-      </div>
-  </form>
-</div>
-
   </div>
+</div>

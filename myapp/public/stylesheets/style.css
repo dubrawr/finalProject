@@ -1,6 +1,7 @@
 #body-display {background-color: #323232;}
 
 
+
 li > a { color: #323232;}
 li>a:hover {color: black;}
 
@@ -17,9 +18,16 @@ li>a:hover {color: black;}
     position: absolute;
     left:178px; top:92px; right:0; bottom:0;
 }
-
-.home {text-align: center;}
+.home {width: 526px; margin: 0 auto;}
 
 .homeButtons {display: block; color: #e2ff88;}
 
-.submitButton {background-color: ;}
+#smLogo {margin-left: 10px;}
+
+.marginLeft {margin-left: 20px;}
+
+
+.floatLeft {float: left;}
+.floatRight {float: right;}
+
+.clear {clear: both;}
