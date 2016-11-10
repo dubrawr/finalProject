@@ -1,38 +1,9 @@
 <div class="home">
   <div class="mixtape">
     <img src="./images/mixtape.png">
-    <div class="homeButtons floatLeft loginButton" ng-click="showLogin()">login</div>
-    <div class="homeButtons floatRight registerButton" ng-click="showRegister()">register</div>
-    <div ng-if="login">
-      <form class="form clear" ng-submit="login()">
-        <div class="form-group">
-
-          <input type="text" size="20" placeholder="Username" name="username" ng-model="loginForm.username" required>
-        </div>
-        <div class="form-group">
-
-          <input type="password" size="20" placeholder="Password" name="password" ng-model="loginForm.password" required>
-        </div>
-        <div>
-          <button type="submit" class="btn" ng-disabled="disabled">SUBMIT</button>
-        </div>
-      </form>
-    </div>
-
-    <div ng-if="register">
-      <form class="form clear floatRight" ng-submit="register()">
-        <div class="form-group">
-
-          <input type="text" size="20" placeholder="Username" name="username" ng-model="register.username" required>
-        </div>
-        <div class="form-group">
-
-          <input type="password" size="20" placeholder="Password" name="password" ng-model="register.password" required>
-        </div>
-        <div>
-          <button class="floatRight" type="submit" class="btn" ng-disabled="disabled">SUBMIT</button>
-        </div>
-      </form>
+    <a href="#/login">Login</a>
+    <a href="#/register">Register</a>
+    
     </div>
   </div>
 </div>
