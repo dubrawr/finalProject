@@ -1,4 +1,4 @@
-var myApp = angular.module('myApp', ['ngRoute']);
+var myApp = angular.module('myApp', ['ngRoute', 'as.sortable']);
 
 myApp.config(function ($routeProvider){
 $routeProvider
@@ -21,7 +21,7 @@ $routeProvider
       controller: 'registerController',
       access: {restricted: false}
     })
-    .when('/create', {
+    .when('/playlist/:id/edit', {
       templateUrl: '/create.html',
       controller: 'playlistController',
       access: {restricted: true}

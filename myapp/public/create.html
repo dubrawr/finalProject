@@ -1,3 +1,4 @@
+<div class="floatLeft col-xs-6">
 <form ng-submit="search()">
       <input type="text" name="enter-artist" placeholder="enter artist name here" id="artistInput" ng-model="artistName">
       <button type="submit" class="btn">search</button>
@@ -9,16 +10,18 @@
     <div ng-repeat="result in results">
 
       <ul>
-      <li class="results" id="{{result.id}}" ng-dblclick="playSnippet()">{{result.artists[0].name}} - {{result.name}} <img ng-click="addSong()" src="./images/add.png"></li>
+      <li class="results" data-id="{{result.id}}" ng-dblclick="playSnippet()">{{result.artists[0].name}} - {{result.name}} <img ng-click="addSong(result)" src="./images/add.png"></li>
       </ul>
     </div>
   </div>
+</div>
 
-<div>
-  <div class="floatRight" ng-repeat="song in playlist">
-  <span>playlist<span>
-  <ul id="sortable">
-  	<li>{{playlist.song}}</li>
+<div class="floatRight col-xs-6">
+<span>{{playlistTitle}}</span>
+  <div >
+  <ul ng-repeat="song in playlist" id="sortable">
+
+  	<li>{{song.name}}</li>
   </ul>
   </div>
   <div ng-click="save()">SAVE button</div>
