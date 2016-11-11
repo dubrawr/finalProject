@@ -1,7 +1,6 @@
 #body-display {background-color: #323232;}
 
 
-
 li > a { color: #323232;}
 li>a:hover {color: black;}
 
@@ -18,7 +17,7 @@ li>a:hover {color: black;}
     position: absolute;
     left:178px; top:92px; right:0; bottom:0;
 }
-.home {width: 526px; margin: 0 auto;}
+.home {width: 526px; margin: 0 auto; text-align: center;}
 
 .homeButtons {display: block; color: #e2ff88;}
 
@@ -31,3 +30,4 @@ li>a:hover {color: black;}
 .floatRight {float: right;}
 
 .clear {clear: both;}
+

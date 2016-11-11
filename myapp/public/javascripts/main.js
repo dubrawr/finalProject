@@ -3,12 +3,9 @@ var myApp = angular.module('myApp', ['ngRoute']);
 myApp.config(function ($routeProvider){
 $routeProvider
 	.when('/', {
-		templateUrl: '/home.html',
-		controller: 'homeController'
-	})
-	.when('/dashboard', {
 		templateUrl: '/dashboard.html',
-		controller: 'dashboardController'
+		controller: 'dashboardController',
+    access: {restricted: true}
 	})
 	.when('/login', {
       templateUrl: '/login.html',
@@ -24,6 +21,22 @@ $routeProvider
       controller: 'registerController',
       access: {restricted: false}
     })
+    .otherwise({
+      redirectTo: '/'
+    });
+});
+
+myApp.run(function ($rootScope, $location, $route, AuthService) {
+  $rootScope.$on('$routeChangeStart',
+    function (event, next, current) {
+      AuthService.getUserStatus()
+      .then(function(){
+        if (next.access.restricted && !AuthService.isLoggedIn()){
+          $location.path('/login');
+          $route.reload();
+        }
+      });
+  });
 });
 
 

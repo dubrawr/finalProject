@@ -29,7 +29,6 @@ router.post('/register', function(req, res) {
 });
 
 router.post('/login', function(req, res, next) {
-	console.log('login test');
   passport.authenticate('local', function(err, user, info) {
 
     if (err) {
