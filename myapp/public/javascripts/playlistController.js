@@ -3,9 +3,16 @@ angular.module('myApp')
 	$httpProvider.defaults.useXDomain = true;
 	delete $httpProvider.defaults.headers.common['X-Requested-With'];
 })
-.controller('playlistController', ['$routeParams', '$scope', '$http', '$location',
-	function($routeParams, $scope, $http, $location){
+.controller('playlistController', ['$routeParams', '$scope', '$http', '$location', 	function($routeParams, $scope, $http, $location){
 
+		$scope.playSnippet = function(){
+
+		};
+
+		$scope.addSong = function(){
+			var url = "https://api.spotify.com/v1/tracks/";
+	
+		};
 
 		$scope.search = function(){
 			var url = "https://api.spotify.com/v1/search";
@@ -25,6 +32,8 @@ angular.module('myApp')
 				$scope.artistName = '';
 				$scope.results = response.data.tracks.items;
 			});
+
+
 		};
 
 

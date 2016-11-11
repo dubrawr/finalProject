@@ -9,15 +9,15 @@
     <div ng-repeat="result in results">
 
       <ul>
-      <li>{{result.artists[0].name}} - {{result.name}}</li>
+      <li class="results" id="{{result.id}}" ng-dblclick="playSnippet()">{{result.artists[0].name}} - {{result.name}} <img ng-click="addSong()" src="./images/add.png"></li>
       </ul>
     </div>
   </div>
 
 <div>
-  <div ng-repeat="song in playlist">
+  <div class="floatRight" ng-repeat="song in playlist">
   <span>playlist<span>
-  <ul>
+  <ul id="sortable">
   	<li>{{playlist.song}}</li>
   </ul>
   </div>
