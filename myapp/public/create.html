@@ -6,10 +6,10 @@
 
     <div>
     <P>song list</P>
-    <div ng-repeat="song in songs">
+    <div ng-repeat="result in results">
 
       <ul>
-      <li>{{song.songs}}</li>
+      <li>{{result.artists[0].name}} - {{result.name}}</li>
       </ul>
     </div>
   </div>

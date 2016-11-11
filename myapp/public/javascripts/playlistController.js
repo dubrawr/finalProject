@@ -10,7 +10,7 @@ angular.module('myApp')
 		$scope.search = function(){
 			var url = "https://api.spotify.com/v1/search";
 			var params = {
-				type: 'artist',
+				type: 'artist' && 'track',
 				q: $scope.artistName,
 				key: "a27e704d5d39416fbf9170ad339a2cdd"
 			};
@@ -20,6 +20,10 @@ angular.module('myApp')
 				params: params
 			}).then(function(response){
 				console.log(response);
+				console.log(response.data.tracks.items[0].artists[0].name);
+				console.log(response.data.tracks.items[0].name);
+				$scope.artistName = '';
+				$scope.results = response.data.tracks.items;
 			});
 		};
 
