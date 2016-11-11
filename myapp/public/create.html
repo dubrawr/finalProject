@@ -1,0 +1,25 @@
+<form ng-submit="search()">
+      <input type="text" name="enter-artist" placeholder="enter artist name here" id="artistInput" ng-model="artistName">
+      <button type="submit" class="btn">search</button>
+    </form>
+
+
+    <div>
+    <P>song list</P>
+    <div ng-repeat="song in songs">
+
+      <ul>
+      <li>{{song.songs}}</li>
+      </ul>
+    </div>
+  </div>
+
+<div>
+  <div ng-repeat="song in playlist">
+  <span>playlist<span>
+  <ul>
+  	<li>{{playlist.song}}</li>
+  </ul>
+  </div>
+  <div ng-click="save()">SAVE button</div>
+  </div>

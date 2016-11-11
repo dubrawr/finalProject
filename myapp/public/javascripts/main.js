@@ -21,6 +21,11 @@ $routeProvider
       controller: 'registerController',
       access: {restricted: false}
     })
+    .when('/create', {
+      templateUrl: '/create.html',
+      controller: 'playlistController',
+      access: {restricted: true}
+    })
     .otherwise({
       redirectTo: '/'
     });
