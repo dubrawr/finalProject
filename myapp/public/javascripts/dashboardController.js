@@ -11,6 +11,16 @@ angular.module('myApp').controller('dashboardController', ['$scope', '$http', '$
   		});
   	};
 
-
+// for some reason this doesn't work the first time
+// only after i create a playlist first
+    $scope.showPlaylists = function(){
+      $http({
+        url: '/user/playlist',
+        method: 'GET'
+      }).then(function(response){
+        console.log(response.data);
+        $scope.playlists = response.data;
+      });
+    };
 
 }]);

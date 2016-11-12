@@ -23,11 +23,12 @@ router.post('/playlist', function(request, response){
 });
 
 router.post('/playlist/:id', function(request, response){
-	console.log(request.body);
+	console.log(request.body.songs);
 	Playlist.findOne({_id: request.body.id.id}, function(err, results){
 		console.log(results);
 		if (results) {
-			results.songs = request.body;
+			results.songs = request.body.songs;
+			results.title = request.body.title;
 			results.save(function(err){
 				if (err) {
 					return response.status(400).send(err);
@@ -39,6 +40,13 @@ router.post('/playlist/:id', function(request, response){
 		console.log(results);
 	});
 
+router.get('/playlist', function(request, response){
+	Playlist.find({user: request.user}, function(err,results){
+		response.json(results);
+	});
+
+
+});
 
 });
 

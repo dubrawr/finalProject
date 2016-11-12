@@ -1,8 +1,12 @@
-<h1>test</h1>
+<div ng-init="showPlaylists()">
 
-
+<div ng-repeat="playlist in playlists">
+<div data-id="{{playlist._id}}">{{playlist.title}}</div>
+</div>
 <a ng-click="createPlaylist()"><span>Create new playlist</span></a><br>
 
 <div ng-controller="logoutController">
 	<a ng-click='logout()' class="btn btn-default">Logout</a>
+</div>
+
 </div>
