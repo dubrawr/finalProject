@@ -1,6 +1,6 @@
 angular.module('myApp').controller('dashboardController', ['$scope', '$http', '$location',
   function ($scope, $http, $location) {
-
+    $scope.loggedIn = false;
   	$scope.createPlaylist = function(){
   		$http({
   			url: '/user/playlist',
@@ -20,6 +20,7 @@ angular.module('myApp').controller('dashboardController', ['$scope', '$http', '$
       }).then(function(response){
         console.log(response.data);
         $scope.playlists = response.data;
+        $scope.loggedIn = true;
       });
     };
 

@@ -3,28 +3,36 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-<link href="./stylesheets/style.css" rel="stylesheet">
-<link href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.6/yeti/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="./stylesheets/style.css" rel="stylesheet">
+  <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.6/yeti/bootstrap.min.css" rel="stylesheet">
+
 </head>
 <body id="body-display">
 
-<div class="left">
-<img id="smLogo" src="./images/sm-mixtape.png">
-<div class="marginLeft">
-<a href="#/"><span>Home</span></a><br>
-<a href="#/login"><span>Login</span></a><br>
-<a href="#/register"><span>Register</span></a><br>
-<a ng-controller="logoutController" href="#/" ng-click="logout()">Logout</a>
-<p ng-if="loggedIn">Playlists</p>
-<ul ng-repeat="playlist in playlists">
-<li>{{playlist.title}}}</li>
-</ul>
-</div>
-</div>
+  <div class="left">
+    <img id="smLogo" src="./images/sm-mixtape.png">
+    <div class="marginLeft">
+      <a href="#/"><span>Home</span></a><br>
+      <a href="#/login"><span>Login</span></a><br>
+      <a href="#/register"><span>Register</span></a><br>
+      <a ng-controller="logoutController" href="#/" ng-click="logout()">Logout</a>
 
-<div class="container main">
-<div ng-view></div>
-</div>
+    </div>
+    <!-- not sure why this isn't working correctly -->
+    <div ng-controller="dashboardController">
+        <div ng-show="loggedIn">
+        <p>Playlists</p>
+        <ul ng-repeat="playlist in playlists">
+        <li data-id="{{playlist._id}}">{{playlist.title}}}</li>
+        </ul>
+        </div>
+      </div>
+  </div>
+
+  <div class="container main">
+    <div ng-view></div>
+  </div>
 
 
 
@@ -39,8 +47,8 @@
   <script type="text/javascript" src="ng-sortable/dist/ng-sortable.css"></script>
   <script src="/javascripts/main.js"></script>
   <script src="/javascripts/controllers.js"></script>
-    <script src="/javascripts/services.js"></script>
-    <script src="/javascripts/dashboardController.js"></script>
-    <script src="/javascripts/playlistController.js"></script>
+  <script src="/javascripts/services.js"></script>
+  <script src="/javascripts/dashboardController.js"></script>
+  <script src="/javascripts/playlistController.js"></script>
 </body>
 </html>

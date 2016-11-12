@@ -1,16 +1,32 @@
 #body-display {background-color: #323232;}
 
+.createButton {
+	font-size: 20px;
+	margin: 0 auto;
+}
+
+.playlist {
+	height: 50px; 
+	font-weight: bold; 
+	font-family: Roboto, Helvetica, sans-serif; 
+	width: 150px; 
+	background-color: #323232; 
+	color: #e2ff88; 
+	border: 3px solid #e2ff88;
+	display: inline-block;
+	margin: 10px;
+}
 
 li > a { color: #323232;}
 li>a:hover {color: black;}
 
 .left {
-    position:absolute;
+    position: absolute;
     left:0; top: 0; bottom: 0;
     width: 178px;
     background-color: #e2ff88;
     color: #323232;
-    font-style: Roboto, Helvetica, sans-serif;
+    font-family: Roboto, Helvetica, sans-serif;
 }
 
 .main {
@@ -19,6 +35,7 @@ li>a:hover {color: black;}
     left:178px; top:92px; right:0; bottom:0;
 }
 .home {width: 526px; margin: 0 auto; text-align: center;}
+/*0*/
 
 .homeButtons {display: block; color: #e2ff88;}
 
