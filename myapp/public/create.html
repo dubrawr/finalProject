@@ -17,7 +17,11 @@
 </div>
 
 <div class="floatRight col-xs-6">
-<span>{{playlistTitle}}</span>
+<span ng-hide="editing" ng-click="editing = true">{{playlistTitle}}</span>
+<form ng-show="editing" ng-submit="editing = false">
+<input type="text" ng-model="playlistTitle" placeholder="Playlist Title" ng-required/>
+<button class="btn" type="submit">Save</button>
+</form>
   <div >
   <ul ng-repeat="song in playlist" id="sortable">
 

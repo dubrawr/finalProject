@@ -4,11 +4,7 @@ var passportLocalMongoose = require('passport-local-mongoose');
 
 var User = new Schema({
 	username: String,
-	password: String,
-	playlists: {
-		type: mongoose.Schema.Types.ObjectId,
-		ref: 'Playlist'
-	}
+	password: String
 });
 
 User.plugin(passportLocalMongoose);

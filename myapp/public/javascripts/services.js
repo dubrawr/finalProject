@@ -13,7 +13,6 @@ angular.module('myApp').factory('AuthService',
       login: login,
       logout: logout,
       register: register,
-      createHangout: createHangout,
       username: username
     });
 
@@ -127,34 +126,6 @@ angular.module('myApp').factory('AuthService',
 
     }
 
-    // creates a hangout
-    function createHangout(hangout, startDate, endDate, invited){
-      var deferred = $q.defer();
-
-      var data = {
-      hangout: hangout,
-      startDate: startDate,
-      endDate: endDate,
-      invited: invited
-      };
-      $http({
-      url: '/user/hangouts',
-      method: 'POST',
-      data: data,
-      })
-      .success(function(data, status){
-        if(status === 200 && data.status){
-          deferred.resolve();
-        } else {
-          deferred.reject();
-        }
-      })
-      .error(function(data){
-        deferred.reject();
-      });
-      console.log(data);
-      return deferred.promise;
-      //after create hangout change route to /calendar
-      }
+    
 
 }]);

@@ -4,6 +4,7 @@ angular.module('myApp')
 	delete $httpProvider.defaults.headers.common['X-Requested-With'];
 })
 .controller('playlistController', ['$routeParams', '$scope', '$http', '$location', 	function($routeParams, $scope, $http, $location){
+		$scope.playlistTitle = 'Playlist Title';
 
 		$scope.playSnippet = function(){
 
@@ -47,6 +48,21 @@ angular.module('myApp')
 			});
 
 
+		};
+
+		$scope.save = function(){
+			var data = {
+				title: $scope.playlistTitle,
+				songs: $scope.playlist,
+				id: $routeParams
+			};
+			$http({
+				method: 'POST',
+				url: '/user/playlist/'+$routeParams.id,
+				data: data
+			}).then(function(response){
+				console.log(response);
+			});
 		};
 
 
