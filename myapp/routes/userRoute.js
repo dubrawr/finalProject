@@ -62,7 +62,7 @@ router.get('/logout', function(req, res) {
 
 router.get('/status', function(req, res) {
   if (!req.isAuthenticated()) {
-    return res.status(200).json({
+    return res.status(403).json({
       status: false
     });
   }

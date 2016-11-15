@@ -10,8 +10,7 @@ var hash = require('bcrypt-nodejs');
 var passport = require('passport');
 var localStrategy = require('passport-local' ).Strategy;
 
-var userRoutes = require('./routes/userRoute.js');
-var playlistRoutes = require('./routes/playlistRoute.js');
+
 
 
 // mongoose
@@ -45,12 +44,12 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 // require routes
-var userRoutes = require('./routes/userRoute.js');
-var playlistRoutes = require('./routes/playlistRoute.js');
+var userRoutes = require('./routes/userRoute');
+var playlistRoutes = require('./routes/playlistRoute');
 
 // routes
-app.use('/user/', userRoutes);
-app.use('/user/', playlistRoutes);
+app.use('/user', userRoutes);
+app.use('/playlist', playlistRoutes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

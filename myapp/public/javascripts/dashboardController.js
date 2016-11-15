@@ -3,7 +3,7 @@ angular.module('myApp').controller('dashboardController', ['$scope', '$http', '$
     $scope.loggedIn = false;
   	$scope.createPlaylist = function(){
   		$http({
-  			url: '/user/playlist',
+  			url: '/playlist/playlist',
   			method: 'POST',
   		}).then(function(response){
   			console.log(response);
@@ -15,7 +15,7 @@ angular.module('myApp').controller('dashboardController', ['$scope', '$http', '$
 // only after i create a playlist first
     $scope.showPlaylists = function(){
       $http({
-        url: '/user/playlist',
+        url: '/playlist',
         method: 'GET'
       }).then(function(response){
         console.log(response.data);
@@ -31,5 +31,6 @@ angular.module('myApp').controller('dashboardController', ['$scope', '$http', '$
       console.log($scope.songlist);
     };
 
+    $scope.showPlaylists();
 
 }]);

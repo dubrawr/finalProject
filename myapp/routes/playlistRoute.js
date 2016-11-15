@@ -39,21 +39,21 @@ router.post('/playlist/:id', function(request, response){
 		}
 		console.log(results);
 	});
+});
 
-router.get('/playlist', function(request, response){
-	console.log(request.user);
-	Playlist.find({user: request.user}, function(err,results){
-		console.log(results);
-		response.json(results);
+router.get('/', function(request, response){
+		console.log('hello');
+		console.log(request.user);
+		Playlist.find({user: request.user}, function(err,results){
+			console.log(results);
+			response.json(results);
+		});
+
+
 	});
 
-
-});
-
-router.get('/playlist/:id', function(request, response){
-	console.log(request.body);
-});
-
-});
+	router.get('/playlist/:id', function(request, response){
+		console.log(request.body);
+	});
 
 module.exports = router;
