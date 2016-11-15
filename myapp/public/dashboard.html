@@ -1,45 +1,45 @@
 <div class="grid">
 
-<a class="createButton" ng-click="createPlaylist()"><span>Create new playlist</span></a><br>
+	<a class="createButton" ng-click="createPlaylist()"><span>Create new playlist</span></a><br>
 
 
 
-<div class="lists">
+	<div class="lists">
 
-<div ng-repeat="playlist in playlists">
-<div data-toggle="modal" data-target="#myModal" ng-click="display(playlist)" class="floatLeft playlist" data-id="{{playlist._id}}">{{playlist.title}}</div>
-</div>
+		<div ng-repeat="playlist in playlists">
+			<div data-toggle="modal" data-target="#myModal" ng-click="display(playlist)" class="floatLeft playlist" data-id="{{playlist._id}}">{{playlist.title}}</div>
+		</div>
 
 
-<!-- Modal -->
-<div class="modal fade" id="myModal" role="dialog">
-	<div class="modal-dialog">
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" role="dialog">
+			<div class="modal-dialog">
 
-		<!-- Modal content-->
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal">&times;</button>
-				<h4 class="modal-title">Create a new Hangout.</h4>
-			</div>
-			<div class="modal-body">
-				<p>
-					<div class="current" ng-show="!show" >
-<span>{{title}}</span>
-	<ul ng-repeat="song in songlist">
-	<li data-id="{{song.id}}">{{song.artists[0].name}} - {{song.name}}</li>
-	</ul>
-</div>
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Create a new Hangout.</h4>
+					</div>
+					<div class="modal-body">
+						<p>
+							<div class="current" ng-show="!show" >
+								<span>{{title}}</span>
+								<ul ng-repeat="song in songlist">
+									<li ng-click="play(song)" data-id="{{song.id}}">{{song.artists[0].name}} - {{song.name}}</li>
+								</ul>
+							</div>
 
-				</p>
-			</div>
-			<div class="modal-footer">
-				<button type="button" id="newHangout" class="btn btn-default" data-dismiss="modal">Close</button>
+						</p>
+					</div>
+					<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+
 			</div>
 		</div>
 
+
 	</div>
-</div>
-
-
-</div>
 </div>

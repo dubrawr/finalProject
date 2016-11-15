@@ -20,14 +20,14 @@
 
     </div>
     <!-- not sure why this isn't working correctly -->
-    <div ng-controller="dashboardController">
-        <div ng-show="loggedIn">
-        <p>Playlists</p>
-        <ul ng-repeat="playlist in playlists">
-        <li data-id="{{playlist._id}}">{{playlist.title}}}</li>
-        </ul>
-        </div>
-      </div>
+  <!--   <div ng-init="loggedIn = false" ng-controller="dashboardController">
+
+      <p>Playlists</p>
+      <ul ng-if="loggedIn" ng-repeat="playlist in playlists">
+        <li data-id="{{playlist._id}}">{{playlist.title}}</li>
+      </ul>
+
+    </div> -->
   </div>
 
   <div class="container main">

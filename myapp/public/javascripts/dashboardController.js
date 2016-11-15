@@ -20,7 +20,6 @@ angular.module('myApp').controller('dashboardController', ['$scope', '$http', '$
       }).then(function(response){
         console.log(response.data);
         $scope.playlists = response.data;
-        $scope.loggedIn = true;
       });
     };
 
@@ -30,6 +29,22 @@ angular.module('myApp').controller('dashboardController', ['$scope', '$http', '$
       $scope.songlist = playlist.songs; 
       console.log($scope.songlist);
     };
+
+
+    var currentSong = [];
+    $scope.play = function(song){
+      var nowPlaying = new Audio(song.preview_url);
+      if (currentSong.length === 1){
+        currentSong[0].pause();
+        currentSong = [];
+        currentSong.push(nowPlaying);
+        nowPlaying.play();
+      } else {
+      currentSong.push(nowPlaying);
+      nowPlaying.play();
+    }
+    };
+
 
     $scope.showPlaylists();
 
