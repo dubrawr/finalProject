@@ -1,4 +1,4 @@
-<div class="floatLeft col-xs-6">
+<div class="floatLeft col-md-6">
 <form ng-submit="search()">
       <input type="text" name="enter-artist" placeholder="enter artist name here" id="artistInput" ng-model="artistName">
       <button type="submit" class="btn">search</button>
@@ -16,7 +16,7 @@
   </div>
 </div>
 
-<div class="floatRight col-xs-6">
+<div class="floatRight col-md-6">
 <span ng-hide="editing" ng-click="editing = true">{{playlistTitle}}</span>
 <form ng-show="editing" ng-submit="editing = false">
 <input type="text" ng-model="playlistTitle" placeholder="Playlist Title" ng-required/>

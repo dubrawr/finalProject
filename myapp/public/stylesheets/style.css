@@ -20,19 +20,25 @@
 li > a { color: #323232;}
 li>a:hover {color: black;}
 
-.left {
+/*.left {
     position: absolute;
     left:0; top: 0; bottom: 0;
     width: 178px;
     background-color: #e2ff88;
     color: #323232;
     font-family: Roboto, Helvetica, sans-serif;
-}
+}*/
+
+.left{float: left; width: 178px; background-color: #e2ff88;
+    color: #323232;
+    font-family: Roboto, Helvetica, sans-serif; height: 100vh; }
+
 
 .main {
 	color: blue;
-    position: absolute;
-    left:178px; top:92px; right:0; bottom:0;
+	overflow: hidden;
+/*    position: absolute;
+    left:178px; top:92px; right:0; bottom:0;*/
 }
 .home {width: 526px; margin: 0 auto; text-align: center;}
 /*0*/

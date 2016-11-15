@@ -4,14 +4,14 @@
 
 
 
-<div>
+<div class="lists">
 
 <div ng-repeat="playlist in playlists">
 <div ng-click="show = !show; display(playlist)" class="floatLeft playlist" data-id="{{playlist._id}}">{{playlist.title}}</div>
 </div>
 
 
-<div ng-show="!show" >
+<div class="current" ng-show="!show" >
 <span>{{title}}</span>
 	<ul ng-repeat="song in songlist">
 	<li data-id="{{song.id}}">{{song.artists[0].name}} - {{song.name}}</li>
