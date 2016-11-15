@@ -25,7 +25,7 @@
   <div >
   <ul ng-repeat="song in playlist" id="sortable">
 
-  	<li>{{song.name}}</li>
+  	<li ng-dblclick="pause()" ng-click="play(song)">{{song.artists[0].name}} - {{song.name}}</li>
   </ul>
   </div>
   <div ng-click="save()">SAVE button</div>

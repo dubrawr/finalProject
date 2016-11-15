@@ -6,9 +6,24 @@ angular.module('myApp')
 .controller('playlistController', ['$routeParams', '$scope', '$http', '$location', 	function($routeParams, $scope, $http, $location){
 		$scope.playlistTitle = 'Playlist Title';
 
-		$scope.playSnippet = function(){
+var currentSong = [];
+$scope.play = function(song){
+  var nowPlaying = new Audio(song.preview_url);
+  if (currentSong.length === 1){
+    currentSong[0].pause();
+    currentSong = [];
+    currentSong.push(nowPlaying);
+    nowPlaying.play();
+  } else {
+    currentSong.push(nowPlaying);
+    nowPlaying.play();
+  }
+};
 
-		};
+$scope.pause = function(){
+	currentSong[0].pause();
+};
+
 		$scope.playlist = [];
 		$scope.addSong = function(result){
 			$scope.playlist.push(result);
