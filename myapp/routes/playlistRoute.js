@@ -41,11 +41,17 @@ router.post('/playlist/:id', function(request, response){
 	});
 
 router.get('/playlist', function(request, response){
+	console.log(request.user);
 	Playlist.find({user: request.user}, function(err,results){
+		console.log(results);
 		response.json(results);
 	});
 
 
+});
+
+router.get('/playlist/:id', function(request, response){
+	console.log(request.body);
 });
 
 });

@@ -13,19 +13,6 @@ angular.module('myApp')
 		$scope.addSong = function(result){
 			$scope.playlist.push(result);
 			console.log($scope.playlist);
-
-			// var id = $(event.target).data('id');
-			// var url = "https://api.spotify.com/v1/tracks/"+ id;
-			// var params= {
-			// 	key: "a27e704d5d39416fbf9170ad339a2cdd"
-			// };
-			// $http({
-			// 	method: 'GET',
-			// 	url: url,
-			// 	params: params
-			// }).then(function(response){
-			// console.log(response);
-			// });
 		};
 
 		$scope.search = function(){

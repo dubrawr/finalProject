@@ -24,4 +24,12 @@ angular.module('myApp').controller('dashboardController', ['$scope', '$http', '$
       });
     };
 
+    $scope.display = function(playlist){
+      $scope.title = playlist.title;
+      $scope.songlist = [];
+      $scope.songlist = playlist.songs; 
+      console.log($scope.songlist);
+    };
+
+
 }]);

@@ -1,19 +1,23 @@
-<div class="grid">
+<div ng-init="showPlaylists()" class="grid">
 
 <a class="createButton" ng-click="createPlaylist()"><span>Create new playlist</span></a><br>
 
 
 
-<div ng-init="showPlaylists()">
+<div>
 
 <div ng-repeat="playlist in playlists">
-<div class="playlist" data-id="{{playlist._id}}">{{playlist.title}}</div>
+<div ng-click="show = !show; display(playlist)" class="floatLeft playlist" data-id="{{playlist._id}}">{{playlist.title}}</div>
 </div>
 
 
-<!-- <div ng-controller="logoutController">
-	<a ng-click='logout()' class="btn btn-default">Logout</a>
-</div> -->
+<div ng-show="!show" >
+<span>{{title}}</span>
+	<ul ng-repeat="song in songlist">
+	<li data-id="{{song.id}}">{{song.artists[0].name}} - {{song.name}}</li>
+	</ul>
+</div>
+
 
 </div>
 </div>
