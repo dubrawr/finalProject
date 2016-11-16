@@ -11,13 +11,14 @@
 <body id="body-display">
 
   <div class="left col-md-2">
+  <div class="center">
     <img id="smLogo" src="./images/sm-mixtape.png">
-    <div class="marginLeft">
+    <div>
       <a href="#/"><span>Home</span></a><br>
       <a href="#/login"><span>Login</span></a><br>
       <a href="#/register"><span>Register</span></a><br>
       <a ng-controller="logoutController" href="#/" ng-click="logout()">Logout</a>
-
+</div>
     </div>
     <!-- not sure why this isn't working correctly -->
   <!--   <div ng-init="loggedIn = false" ng-controller="dashboardController">

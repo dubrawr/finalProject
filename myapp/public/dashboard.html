@@ -1,10 +1,11 @@
 <div class="grid">
 
-	<a class="createButton" ng-click="createPlaylist()"><span>Create new playlist</span></a><br>
+	
 
 
 
 	<div class="lists">
+	<a class="createButton" ng-click="createPlaylist()"><span>Create new playlist</span></a><br>
 
 		<div ng-repeat="playlist in playlists">
 			<div data-toggle="modal" data-target="#myModal" ng-click="display(playlist)" class="floatLeft playlist" data-id="{{playlist._id}}">{{playlist.title}}</div>
