@@ -1,32 +1,39 @@
-<div class="floatLeft col-md-6">
-<form ng-submit="search()">
+<div class="create">
+  
+
+
+  <div class="leftDiv col-md-6">
+    <form ng-submit="search(); resultsFound=true">
       <input type="text" name="enter-artist" placeholder="enter artist name here" id="artistInput" ng-model="artistName">
       <button type="submit" class="btn">search</button>
     </form>
 
+    <P ng-if="resultsFound">{{results.length}} Results Found For {{searched | uppercase}}</P>
+    <div id="searchResults" class="results">
 
-    <div>
-    <P>song list</P>
-    <div ng-repeat="result in results">
-
-      <ul>
-      <li class="results" data-id="{{result.id}}" ng-dblclick="playSnippet()">{{result.artists[0].name}} - {{result.name}} <img ng-click="addSong(result)" src="./images/add.png"></li>
+      <ul ng-repeat="result in results">
+        <li class="hand resultList" data-id="{{result.id}}" ng-dblclick="playSnippet()">{{result.artists[0].name}} - {{result.name}} <img ng-click="addSong(result)" src="./images/add.png"></li>
       </ul>
     </div>
   </div>
+
+  
+
+
+  <div class="col-md-6">
+  <div class="playlistTitle">
+    <span ng-hide="editing" ng-click="editing = true">{{playlistTitle}}</span>
+    <form ng-show="editing" ng-submit="editing = false">
+      <input type="text" ng-model="playlistTitle" placeholder="Playlist Title" ng-required/>
+      <button class="btn" type="submit">Save</button>
+    </form>
+    </div>
+    <div class="added">
+      <ul ng-repeat="song in playlist" id="sortable">
+
+       <li class="hand addedList" ng-dblclick="pause()" ng-click="play(song)">{{song.artists[0].name}} - {{song.name}}<span ng-click="delete(song)" class="delete floatRight">x</span></li>
+     </ul>
+   </div>
+   <div ng-click="save()">SAVE button</div>
+ </div>
 </div>
-
-<div class="floatRight col-md-6">
-<span ng-hide="editing" ng-click="editing = true">{{playlistTitle}}</span>
-<form ng-show="editing" ng-submit="editing = false">
-<input type="text" ng-model="playlistTitle" placeholder="Playlist Title" ng-required/>
-<button class="btn" type="submit">Save</button>
-</form>
-  <div >
-  <ul ng-repeat="song in playlist" id="sortable">
-
-  	<li ng-dblclick="pause()" ng-click="play(song)">{{song.artists[0].name}} - {{song.name}}</li>
-  </ul>
-  </div>
-  <div ng-click="save()">SAVE button</div>
-  </div>

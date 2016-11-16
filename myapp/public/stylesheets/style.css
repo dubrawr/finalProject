@@ -1,10 +1,10 @@
 #body-display {background-color: #323232;}
-
+.create {margin-top: 80px; margin-left: auto; margin-right: auto; height: 100vh;}
 .createButton {
 	font-size: 20px;
 	margin: 0 auto;
 }
-
+.leftDiv {width: 400px;}
 .playlist {
 	height: 50px; 
 	font-weight: bold; 
@@ -16,29 +16,29 @@
 	display: inline-block;
 	margin: 10px;
 }
+.playlistTitle {color: #e2ff88; font-style: bold; font-size: 20px; margin-top: 42px;}
+
+.inlineBlock{display: inline-block;}
+.gray{color: #323232;}
+
+.results {background-color: #e2ff88; color: #323232; border-radius: 10px; width: 500px;}
+.resultList {margin-bottom: -10px; text-align: right;}
 
 li > a { color: #323232;}
-li>a:hover {color: black;}
+.hand {cursor: pointer; cursor: hand;}
 
-/*.left {
-    position: absolute;
-    left:0; top: 0; bottom: 0;
-    width: 178px;
-    background-color: #e2ff88;
-    color: #323232;
-    font-family: Roboto, Helvetica, sans-serif;
-}*/
+li {list-style-type: none;}
+
 
 .left{float: left; width: 178px; background-color: #e2ff88;
     color: #323232;
     font-family: Roboto, Helvetica, sans-serif; height: 100vh; }
 
+.delete {font-style: bold; margin-right: 5px;}
 
 .main {
 	color: blue;
 	overflow: hidden;
-/*    position: absolute;
-    left:178px; top:92px; right:0; bottom:0;*/
 }
 .home {width: 526px; margin: 0 auto; text-align: center;}
 /*0*/
@@ -52,6 +52,6 @@ li>a:hover {color: black;}
 
 .floatLeft {float: left;}
 .floatRight {float: right;}
-
-.clear {clear: both;}
+.added {border-radius: 10px; background-color:#e2ff88; width: 400px;}
+.addedList {background-color: #323232; color: #e2ff88; width: 300px;}
 

@@ -31,6 +31,7 @@ $scope.pause = function(){
 		};
 
 		$scope.search = function(){
+			$scope.searched = $scope.artistName;
 			var url = "https://api.spotify.com/v1/search";
 			var params = {
 				type: 'artist' && 'track',
