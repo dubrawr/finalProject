@@ -1,17 +1,24 @@
 #body-display {background-color: #323232;
 font-family: Roboto, Helvetica, sans-serif; }
 
+a>span{color: #323232}
+.yellow{color: #e2ff88;}
 .create {
 margin-top: 80px;
 margin-left: auto; 
 margin-right: auto;
-height: 100vh;}
+height: 99vh;}
+
+#create {color: #323232; background-color: #e2ff88; padding: 10px; border-radius: 10px;}
 
 .createButton {
 font-size: 20px;
 margin: 0 auto;
 text-align: center;
 }
+
+.marginTop {margin-top: 40px;}
+
 .leftDiv {width: 400px;}
 
 #backgroundGray{background-color:#323232;
@@ -24,15 +31,17 @@ font-family: Roboto, Helvetica, sans-serif;
 width: 150px; 
 background-color: #323232; 
 color: #e2ff88; 
-border: 3px solid #e2ff88;
+border: 1px solid #e2ff88;
 display: inline-block;
 margin: 10px;
 }
+div.playlist:hover {background-color: #e2ff88; color: #323232;}
+
 .playlistTitle {
 color: #e2ff88;
 font-style: bold;
 font-size: 20px; 
-margin-top: 32px;
+margin-top: 30px;
 }
 
 .inlineBlock{display: inline-block;}
@@ -42,12 +51,11 @@ margin-top: 32px;
 background-color: #e2ff88;
 color: #323232; 
 border-radius: 10px;
-width: 500px;
+width: 459px;
 }
 
 .resultList {
-margin-bottom: -10px;
-text-align: right;}
+text-align: right; padding-top: 8.5px;}
 
 li > a { color: #323232;}
 .hand {
@@ -64,7 +72,7 @@ li.borderYellow:hover {background-color: #e2ff88; color: #323232;}
 float: left; 
 color: #323232;
 font-family: Roboto, Helvetica, sans-serif; 
-height: 100vh;
+height: 99vh;
 }
 
 .delete {
@@ -78,12 +86,15 @@ margin-right: 5px;
 color: blue;
 overflow: hidden;
 }
-/*.home {
+.home {
 width: 526px;
-margin: 0 auto;
+margin-left: 25%;
+margin-top: 80px;
 text-align: center;
 }
-*/
+
+span.plus:hover{background-color: #323232; color: #e2ff88;}
+.plus{font-weight: bold; padding-right: 5px; padding-left: 5px; border-radius: 50%; border: 1px solid #323232; margin-bottom: 10px; margin-top:5px; margin-right: 10px;}
 
 .homeButtons {
 display: block; 
@@ -125,7 +136,7 @@ text-align: center;
 width: 178px;
 font-size: 20px; 
 background-color: #e2ff88; 
-height: 100vh;
+height: 99vh;
 }
 
 .marginLeft {margin-left: 10px;}

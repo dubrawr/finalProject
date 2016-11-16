@@ -2,7 +2,7 @@
   <div class="mixtape">
     <img src="./images/mixtape.png">
 
-      <h2>Login</h2>
+      <h2 class="yellow">Login</h2>
       <div ng-show="error" class="alert alert-danger">{{errorMessage}}</div>
       <form class="form" ng-submit="login($event)">
         <div class="form-group">
@@ -14,7 +14,7 @@
           <input class="centerInput oswald" type="password" size="40" placeholder="password" name="password" ng-model="loginForm.password" required>
         </div>
         <div>
-          <button type="submit" class="createhangout btn" ng-disabled="disabled">SUBMIT</button>
+          <button type="submit" id="backgroundYellow" class="btn" ng-disabled="disabled">SUBMIT</button>
         </div>
       </form>
       <br>

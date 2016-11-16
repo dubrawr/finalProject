@@ -5,9 +5,9 @@
 
 
 	<div class="lists">
-	<a class="createButton" ng-click="createPlaylist()"><span>Create new playlist</span></a><br>
+	<a class="hand createButton" ng-click="createPlaylist()"><span id="create">CREATE NEW PLAYLIST</span></a><br>
 
-		<div ng-repeat="playlist in playlists">
+		<div class="marginTop" ng-repeat="playlist in playlists">
 			<div data-toggle="modal" data-target="#myModal" ng-click="display(playlist)" class="hand floatLeft playlist" data-id="{{playlist._id}}">{{playlist.title}}</div>
 		</div>
 
@@ -20,7 +20,7 @@
 				<div id="backgroundYellow" class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modalTitle modal-title">{{title}}</h4>
+						<h4 class="modalTitle modal-title">{{title}}</h4><span id="edit" ng-click="edit()" class="hand">Edit</span>
 					</div>
 					<div id="backgroundGray" class="modal-body">
 						<p>
@@ -34,7 +34,7 @@
 						</p>
 					</div>
 					<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-default" id="backgroundGray" data-dismiss="modal">Close</button>
 					</div>
 				</div>
 

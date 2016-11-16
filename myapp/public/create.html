@@ -5,14 +5,14 @@
   <div class="leftDiv col-md-6 block">
     <form ng-submit="search(); resultsFound=true">
       <input type="text" name="enter-artist" placeholder="enter artist or song name here" id="artistInput" ng-model="artistName" size="50">
-      <button type="submit" class="btn">search</button>
+      <button type="submit" id="backgroundYellow" class="btn">SEARCH</button>
     </form>
 
-    <P ng-if="resultsFound">{{results.length}} Results Found For {{searched | uppercase}}</P>
+    <P ng-if="resultsFound" id="backgroundGray">{{results.length}} Results Found For {{searched | uppercase}}</P>
     <div id="searchResults" class="results">
 
       <ul ng-repeat="result in results">
-        <li class="hand resultList" data-id="{{result.id}}" ng-dblclick="playSnippet()">{{result.artists[0].name}} - {{result.name}} <img ng-click="addSong(result)" src="./images/add.png"></li>
+        <li class="hand resultList" data-id="{{result.id}}" ng-dblclick="playSnippet()">{{result.artists[0].name}} - {{result.name}} <span ng-click="addSong(result)" class="plus">+</span></li></li>
       </ul>
     </div>
   </div>
