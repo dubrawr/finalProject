@@ -2,7 +2,7 @@
   
 
 
-  <div class="leftDiv col-md-6">
+  <div class="leftDiv col-md-6 block">
     <form ng-submit="search(); resultsFound=true">
       <input type="text" name="enter-artist" placeholder="enter artist or song name here" id="artistInput" ng-model="artistName" size="50">
       <button type="submit" class="btn">search</button>
@@ -20,7 +20,7 @@
   
 
 
-  <div class="col-md-6">
+  <div class="col-md-6 block">
   <div class="playlistTitle inlineBlock">
     <span ng-hide="editing" ng-click="editing = true">{{playlistTitle}}</span>
     <form ng-show="editing" ng-submit="editing = false">
@@ -31,7 +31,7 @@
     <div class="added">
       <ul ng-repeat="song in playlist" id="sortable">
 
-       <li id="marginal" class="hand addedList" ng-dblclick="pause()" ng-click="play(song)">{{song.artists[0].name}} - {{song.name}}<span ng-click="delete(song)" class="delete floatRight">x</span></li>
+       <li id="marginal" class="hand addedList"><span class="songnames" ng-dblclick="pause()" ng-click="play(song)">{{song.artists[0].name}} - {{song.name}}</span><span ng-click="delete(song)" class="delete floatRight">x</span></li>
      </ul>
    </div>
    

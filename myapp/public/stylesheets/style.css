@@ -37,6 +37,8 @@ li {list-style-type: none;}
 
 .delete {font-style: bold; margin-right: 5px;}
 
+.block{display: block;}
+
 .main {
 	color: blue;
 	overflow: hidden;
@@ -53,7 +55,7 @@ ul {padding: 0;}
 .floatLeft {float: left;}
 .floatRight {float: right;}
 .added {border-radius: 10px; background-color:#e2ff88; width: 400px; height: 80vh; overflow: auto;}
-.addedList {background-color: #323232; color: #e2ff88; width: 300px; margin: 0 auto;}
+.addedList {background-color: #323232; color: #e2ff88; width: 300px; margin: 0 auto; text-align: center;}
 
 .grid {margin-top:80px;}
 

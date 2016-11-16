@@ -68,6 +68,12 @@ $scope.pause = function(){
 			});
 		};
 
+		$scope.delete = function(song){
+			console.log($scope.playlist.indexOf(song));
+			var index = $scope.playlist.indexOf(song);
+			if (index > -1){
+				$scope.playlist.splice(index, 1);
+			}
+		};
 
-
-	}]);
+}]);
