@@ -4,7 +4,7 @@ angular.module('myApp')
 	delete $httpProvider.defaults.headers.common['X-Requested-With'];
 })
 .controller('playlistController', ['$routeParams', '$scope', '$http', '$location', 	function($routeParams, $scope, $http, $location){
-		$scope.playlistTitle = 'Playlist Title';
+		$scope.playlistTitle = 'Click To Change Playlist Title';
 
 var currentSong = [];
 $scope.play = function(song){
@@ -61,7 +61,7 @@ $scope.pause = function(){
 			};
 			$http({
 				method: 'POST',
-				url: '/user/playlist/'+$routeParams.id,
+				url: '/playlist/'+$routeParams.id,
 				data: data
 			}).then(function(response){
 				console.log(response);
