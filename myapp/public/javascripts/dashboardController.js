@@ -1,23 +1,41 @@
-angular.module('myApp').controller('dashboardController', ['$scope', '$http', '$location',
-  function ($scope, $http, $location) {
+angular.module('myApp')
+.factory('playlistService', ['$http', function($http){
+  return {
+    create: function(){
+      return  $http({
+       url: '/playlist',
+       method: 'POST',
+     });
+    },
+    list: function(){
+      return $http({
+        url: '/playlist',
+        method: 'GET'
+      });
+    },
+    save: function(data){
+      return $http({
+        method: 'POST',
+        url: '/playlist/'+ data.id,
+        data: data
+      });
+    }
+  };
+}])
+.controller('dashboardController', ['$scope', '$location', 'playlistService',
+  function ($scope, $location, playlistService) {
     $scope.loggedIn = false;
     $scope.createPlaylist = function(){
-      $http({
-       url: '/playlist/playlist',
-       method: 'POST',
-     }).then(function(response){
+      playlistService.create()
+      .then(function(response){
        console.log(response);
        $location.path('/playlist/' + response.data._id + '/edit');
      });
    };
 
-// for some reason this doesn't work the first time
-// only after i create a playlist first
 $scope.showPlaylists = function(){
-  $http({
-    url: '/playlist',
-    method: 'GET'
-  }).then(function(response){
+  playlistService.list()
+  .then(function(response){
     console.log(response.data);
     $scope.playlists = response.data;
   });

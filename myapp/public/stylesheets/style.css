@@ -1,5 +1,5 @@
 #body-display {background-color: #323232;
-font-family: Roboto, Helvetica, sans-serif; }
+font-family: Roboto, Helvetica, sans-serif;}
 
 a>span{color: #323232}
 .yellow{color: #e2ff88;}
@@ -32,7 +32,7 @@ width: 150px;
 background-color: #323232; 
 color: #e2ff88; 
 border: 1px solid #e2ff88;
-display: inline-block;
+display: inline-bloc
 margin: 10px;
 }
 div.playlist:hover {background-color: #e2ff88; color: #323232;}

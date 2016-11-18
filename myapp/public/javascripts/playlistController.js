@@ -3,7 +3,8 @@ angular.module('myApp')
 	$httpProvider.defaults.useXDomain = true;
 	delete $httpProvider.defaults.headers.common['X-Requested-With'];
 })
-.controller('playlistController', ['$routeParams', '$scope', '$http', '$location', 	function($routeParams, $scope, $http, $location){
+.controller('playlistController', ['$routeParams', '$scope', '$http', '$location', 'playlistService',
+	function($routeParams, $scope, $http, $location, playlistService){
 		$scope.playlistTitle = 'Click To Change Playlist Title';
 
 var currentSong = [];
@@ -54,16 +55,14 @@ $scope.pause = function(){
 		};
 
 		$scope.save = function(){
+			console.log('hello')
 			var data = {
 				title: $scope.playlistTitle,
 				songs: $scope.playlist,
-				id: $routeParams
+				id: $routeParams.id
 			};
-			$http({
-				method: 'POST',
-				url: '/playlist/'+$routeParams.id,
-				data: data
-			}).then(function(response){
+			playlistService.save(data)
+			.then(function(response){
 				console.log(response);
 			});
 		};

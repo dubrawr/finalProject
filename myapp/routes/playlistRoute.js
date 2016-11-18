@@ -7,7 +7,7 @@ var authenticationRequired = require('./utils.js').authenticationRequired;
 var User = require('../model/user.js');
 var Playlist = require('../model/playlist.js');
 
-router.post('/playlist', function(request, response){
+router.post('/', function(request, response){
 	var createdPlaylist = new Playlist({
 		title: '',
 		songs: [],
@@ -24,8 +24,9 @@ router.post('/playlist', function(request, response){
 });
 
 router.post('/:id', authenticationRequired, function(request, response){
+	console.log('hi');
 	console.log(request.body.songs);
-	Playlist.findOne({_id: request.body.id.id}, function(err, results){
+	Playlist.findOne({_id: request.body.id}, function(err, results){
 		console.log(results);
 		if (results) {
 			results.songs = request.body.songs;
