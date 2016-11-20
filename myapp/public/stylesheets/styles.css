@@ -5,6 +5,101 @@
   flex-wrap: wrap;
 }
 
+#create {color: #323232; background-color: #e2ff88; padding: 10px; border-radius: 10px;}
+.createButton {
+font-size: 20px;
+text-align: center;
+}
+
+.results {
+background-color: #e2ff88;
+color: #323232; 
+border-radius: 10px;
+width: 459px;
+}
+
+.delete {
+font-style: bold; 
+margin-right: 5px;
+float: right;
+}
+
+.addedList {
+background-color: #323232; 
+color: #e2ff88; 
+width: 300px; 
+margin: 0 auto; 
+text-align: center;
+}
+
+.added {
+border-radius: 10px;
+background-color:#e2ff88;
+width: 400px; 
+height: 80vh; 
+overflow: auto;
+}
+
+.playlistTitle {
+color: #e2ff88;
+font-style: bold;
+font-size: 20px; 
+margin-top: 30px;
+}
+
+span.plus:hover{background-color: #323232; color: #e2ff88;}
+.plus{font-weight: bold; padding-right: 5px; padding-left: 5px; border-radius: 50%; border: 1px solid #323232; margin-bottom: 10px; margin-top:5px; margin-right: 10px;}
+
+.resultList {
+text-align: right; padding-top: 8.5px;}
+
+.dashboard {margin-top: 80px;}
+
+.inlineBlock{display: inline-block;}
+
+.playlist {
+height: 50px; 
+font-weight: bold; 
+font-family: Roboto, Helvetica, sans-serif; 
+width: 150px; 
+background-color: #323232; 
+color: #e2ff88; 
+border: 1px solid #e2ff88;
+margin: 10px;
+}
+
+li.playlist:hover {background-color: #e2ff88; color: #323232;}
+
+.flex-container {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.lsn {
+list-style: none;
+}
+
+.bold {font-weight: bold;}
+
+.marginTop {margin-top: 40px;}
+.marginLeft {margin-left: 40px;}
+
+.hand {
+cursor: pointer;
+cursor: hand;}
+
+.wrap    { 
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}  
+
 .HolyGrail-body {
   display: -webkit-flex;
   flex: 1;
@@ -22,13 +117,14 @@
   order: 1;
 }
 
-.HolyGrail-nav, .HolyGrail-ads {
+.HolyGrail-nav {
   /* 12em is the width of the columns */
   flex: 0 0 12em;
 }
 
 .HolyGrail-ads {
 	order: 2;
+  flex: 1;
 }
 
 .HolyGrail-nav {
@@ -49,6 +145,14 @@
 
 .main {display: flex;}
 
+#backgroundGray{background-color:#323232;
+color: #e2ff88;}
+
+#backgroundYellow {
+  background-color: #e2ff88;
+  color: #323232;
+}
+
 @media (min-width: 768px) {
   .HolyGrail-body {
     flex-direction: row;
@@ -58,7 +162,7 @@
     flex: 1;
     background-color: #323232;
   }
-  .HolyGrail-nav, .HolyGrail-ads {
+  .HolyGrail-nav {
     /* 12em is the width of the columns */
     flex: 0 0 12em;
   }

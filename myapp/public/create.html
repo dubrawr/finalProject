@@ -2,7 +2,7 @@
 
 
 
-<div class="HolyGrail-contentOne">
+<div class="HolyGrail-contentOne marginTop marginLeft">
   <form ng-submit="search(); resultsFound=true">
     <input type="text" name="enter-artist" placeholder="enter artist or song name here" id="artistInput" ng-model="artistName" size="50">
     <button type="submit" id="backgroundYellow" class="btn">SEARCH</button>
@@ -11,7 +11,7 @@
   <P ng-if="resultsFound" id="backgroundGray">{{results.length}} Results Found For {{searched | uppercase}}</P>
   <div id="searchResults" class="results">
 
-    <ul ng-repeat="result in results">
+    <ul class="lsn" ng-repeat="result in results">
       <li class="hand resultList" data-id="{{result.id}}" ng-dblclick="playSnippet()">{{result.artists[0].name}} - {{result.name}} <span ng-click="addSong(result)" class="plus">+</span></li></li>
     </ul>
   </div>
@@ -20,18 +20,18 @@
 
 
 
-<div class="HolyGrail-ads">
-  <div class="playlistTitle inlineBlock">
+<div class="HolyGrail-ads marginTop marginLeft">
+  <div class="playlistTitle">
     <span ng-hide="editing" ng-click="editing = true">{{playlistTitle}}</span>
     <form ng-show="editing" ng-submit="editing = false">
       <input type="text" ng-model="playlistTitle" placeholder="Playlist Title" ng-required/>
     </form>
-    <div class="btn inlineBlock" ng-click="save()">SAVE</div>
+    <div class="btn" ng-click="save()">SAVE</div>
   </div>
   <div class="added">
-    <ul ng-repeat="song in playlist" id="sortable">
+    <ul class="lsn" ng-repeat="song in playlist">
 
-      <li id="marginal" class="hand addedList"><span class="songnames" ng-dblclick="pause()" ng-click="play(song)">{{song.artists[0].name}} - {{song.name}}</span><span ng-click="delete(song)" class="delete floatRight">x</span></li>
+      <li class="hand addedList"><span ng-dblclick="pause()" ng-click="play(song)">{{song.artists[0].name}} - {{song.name}}</span><span ng-click="delete(song)" class="delete">x</span></li>
     </ul>
   </div>
 </div>

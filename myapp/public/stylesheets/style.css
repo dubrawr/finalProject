@@ -32,7 +32,6 @@ width: 150px;
 background-color: #323232; 
 color: #e2ff88; 
 border: 1px solid #e2ff88;
-display: inline-bloc
 margin: 10px;
 }
 div.playlist:hover {background-color: #e2ff88; color: #323232;}

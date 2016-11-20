@@ -55,7 +55,7 @@ $scope.pause = function(){
 		};
 
 		$scope.save = function(){
-			console.log('hello')
+			console.log('hello');
 			var data = {
 				title: $scope.playlistTitle,
 				songs: $scope.playlist,
