@@ -6,7 +6,7 @@
 
 	<div>
 	<div>
-	<a class="hand createButton" ng-click="createPlaylist()"><span id="create">CREATE NEW PLAYLIST</span></a></div><br>
+	<a class="flex-container hand createButton" ng-click="createPlaylist()"><span id="create">CREATE NEW PLAYLIST</span></a></div><br>
 	<div class="flex-container">
 		<ul class="marginTop lsn" ng-repeat="playlist in playlists">
 			<li data-toggle="modal" data-target="#myModal" ng-click="display(playlist)" class="hand playlist" data-id="{{playlist._id}}">{{playlist.title}}</li>
@@ -27,7 +27,7 @@
 						<p>
 							<div ng-show="!show" >
 								
-								<ul ng-repeat="song in songlist">
+								<ul id="sortable" ng-repeat="song in songlist">
 									<li class="lsn current hand" ng-dblclick="pause()" ng-click="play(song)" data-id="{{song.id}}"><span class="marginLeft">{{song.artists[0].name}} - {{song.name}}</span></li>
 								</ul>
 							</div>

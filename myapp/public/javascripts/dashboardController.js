@@ -19,6 +19,8 @@ $scope.showPlaylists = function(){
 };
 
 $scope.deletePlaylist = function(){
+  var x = confirm("Are you sure you want to delete?");
+  if (x){
   var data = {
     id: $scope.id
   };
@@ -26,7 +28,10 @@ $scope.deletePlaylist = function(){
   playlistService.delete(data)
   .then(function(response){
     console.log('deleted');
+    $('#myModal').modal('toggle');
+    $scope.showPlaylists();
   });
+} else { return false;}
 };
 
 $scope.display = function(playlist){
@@ -55,6 +60,8 @@ $scope.pause = function(){
   currentSong[0].pause();
 };
 
+
 $scope.showPlaylists();
+
 
 }]);

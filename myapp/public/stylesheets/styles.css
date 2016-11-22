@@ -18,7 +18,7 @@ background-color: #e2ff88;
 color: #323232; 
 border-radius: 10px;
 width: 400px;
-height: 80vh;
+height: 85vh;
 overflow: auto;
 }
 
@@ -27,6 +27,8 @@ font-style: bold;
 margin-right: 5px;
 float: right;
 }
+
+.input {color: #323232;}
 
 .addedList {
 background-color: #323232; 
@@ -41,7 +43,7 @@ padding-right: 0;
 border-radius: 10px;
 background-color:#e2ff88;
 width: 400px; 
-height: 80vh; 
+height: 85vh; 
 overflow: auto;
 }
 
@@ -72,7 +74,7 @@ span.plus:hover{
 ul {margin: 0; padding:0;}
 
 .resultList {
-text-align: right; padding-top: 8.5px; margin-right: 10px;}
+text-align: right; padding-top: 8.5px; margin-right: 10px; margin-left: 10px;}
 
 .dashboard {margin-top: 80px;
     display: -webkit-box;

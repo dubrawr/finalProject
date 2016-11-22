@@ -26,6 +26,7 @@ router.post('/', function(request, response){
 router.post('/:id', authenticationRequired, function(request, response){
 	console.log('hi');
 	console.log(request.body.songs);
+	console.log(request.body.id);
 	Playlist.findOne({_id: request.body.id}, function(err, results){
 		console.log(results);
 		if (results) {
@@ -54,8 +55,8 @@ router.get('/', authenticationRequired, function(request, response){
 
 router.delete('/:id', authenticationRequired, function(request, response){
 	console.log('hi');
-	console.log(request.body);
-	Playlist.findOneAndRemove({_id: request.body.id}, function(err, result){
+	console.log(request.params.id);
+	Playlist.findOneAndRemove({_id: request.params.id}, function(err, result){
 		if (err | !result){
 			console.log('err deleting');
 			return response.status(500).json();

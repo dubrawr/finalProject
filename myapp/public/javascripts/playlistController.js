@@ -7,6 +7,10 @@ angular.module('myApp')
 	function($routeParams, $scope, $http, $location, playlistService){
 		$scope.playlistTitle = 'Click To Rename Playlist';
 
+
+		$('#sortable').sortable();
+		$('#sortable').disableSelection();		
+
 var currentSong = [];
 $scope.play = function(song){
   var nowPlaying = new Audio(song.preview_url);
@@ -74,5 +78,6 @@ $scope.pause = function(){
 				$scope.playlist.splice(index, 1);
 			}
 		};
+
 
 }]);
