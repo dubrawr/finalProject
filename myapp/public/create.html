@@ -30,9 +30,9 @@
     <div class="btn" ng-click="save()">SAVE PLAYLIST</div>
   </div>
   <div ng-if="resultsFound" class="added">
-    <ul id="sortable" class="lsn" ng-repeat="song in playlist">
+    <ul ui-sortable ng-model="playlist" class="lsn">
 
-      <li class="hand addedList"><span ng-dblclick="pause()" ng-click="play(song)">{{song.artists[0].name}} - {{song.name}}</span><span ng-click="delete(song)" class="delete">x</span></li>
+      <li ng-repeat="song in playlist" class="hand addedList"><span ng-dblclick="pause()" ng-click="play(song)">{{song.artists[0].name}} - {{song.name}}</span><span ng-click="delete(song)" class="delete">x</span></li>
     </ul>
   </div>
 </div>

@@ -8,8 +8,23 @@ angular.module('myApp')
 		$scope.playlistTitle = 'Click To Rename Playlist';
 
 
-		$('#sortable').sortable();
-		$('#sortable').disableSelection();		
+		// $('#sortable').sortable();
+		// $('#sortable').disableSelection();		
+
+// $scope.dragControlListeners = {
+//     accept: function (sourceItemHandleScope, destSortableScope) {return boolean;},
+//     itemMoved: function (event) {},
+//     orderChanged: function(event) {},
+//     containment: '#board',//optional param.
+//     clone: true, //optional param for clone feature.
+//     allowDuplicates: false //optional param allows duplicates to be dropped.
+// };
+
+// $scope.dragControlListeners1 = {
+//         containment: '#board',//optional param.
+//         allowDuplicates: true //optional param allows duplicates to be dropped.
+// };
+
 
 var currentSong = [];
 $scope.play = function(song){
