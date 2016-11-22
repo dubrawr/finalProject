@@ -9,13 +9,17 @@
 .createButton {
 font-size: 20px;
 text-align: center;
+margin-left: 40px;
 }
+
 
 .results {
 background-color: #e2ff88;
 color: #323232; 
 border-radius: 10px;
 width: 459px;
+height: 80vh;
+overflow: auto;
 }
 
 .delete {
@@ -47,13 +51,33 @@ font-size: 20px;
 margin-top: 30px;
 }
 
-span.plus:hover{background-color: #323232; color: #e2ff88;}
-.plus{font-weight: bold; padding-right: 5px; padding-left: 5px; border-radius: 50%; border: 1px solid #323232; margin-bottom: 10px; margin-top:5px; margin-right: 10px;}
+span.plus:hover{
+  background-color: #323232;
+  color: #e2ff88;
+}
+
+.plus{
+  font-weight: bold;
+  padding-right: 5px;
+  padding-left: 5px;
+  border-radius: 50%;
+  border: 1px solid #323232;
+  margin-bottom: 10px;
+  margin-top:5px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
 
 .resultList {
 text-align: right; padding-top: 8.5px;}
 
-.dashboard {margin-top: 80px;}
+.dashboard {margin-top: 80px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+  }
 
 .inlineBlock{display: inline-block;}
 
@@ -66,6 +90,26 @@ background-color: #323232;
 color: #e2ff88; 
 border: 1px solid #e2ff88;
 margin: 10px;
+}
+
+li.current:hover {background-color: #e2ff88; color: #323232;}
+
+.mixtape {
+  height: 100%;
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.center {
+text-align: center;
 }
 
 li.playlist:hover {background-color: #e2ff88; color: #323232;}
@@ -143,7 +187,9 @@ cursor: hand;}
   order: -1;
 }
 
-.main {display: flex;}
+.main {display: flex;
+    align-items: center;
+    justify-content: center;}
 
 #backgroundGray{background-color:#323232;
 color: #e2ff88;}

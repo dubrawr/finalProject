@@ -52,5 +52,19 @@ router.get('/', authenticationRequired, function(request, response){
 		});
 });
 
+router.delete('/:id', authenticationRequired, function(request, response){
+	console.log('hi');
+	console.log(request.body);
+	Playlist.findOneAndRemove({_id: request.body.id}, function(err, result){
+		if (err | !result){
+			console.log('err deleting');
+			return response.status(500).json();
+		} else {
+			console.log('delete success');
+			return response.status(200).json();
+		}
+	});
+});
+
 
 module.exports = router;

@@ -18,7 +18,19 @@ $scope.showPlaylists = function(){
   });
 };
 
+$scope.deletePlaylist = function(){
+  var data = {
+    id: $scope.id
+  };
+  console.log(data.id);
+  playlistService.delete(data)
+  .then(function(response){
+    console.log('deleted');
+  });
+};
+
 $scope.display = function(playlist){
+  $scope.id = playlist._id;
   $scope.title = playlist.title;
   $scope.songlist = [];
   $scope.songlist = playlist.songs; 

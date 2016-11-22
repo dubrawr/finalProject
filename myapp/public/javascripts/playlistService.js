@@ -19,6 +19,13 @@ angular.module('myApp')
         url: '/playlist/'+ data.id,
         data: data
       });
+    },
+    delete: function(data){
+      return $http({
+        method: 'DELETE',
+        url: '/playlist/' + data.id,
+        data: data
+      });
     }
   };
 }]);

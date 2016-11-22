@@ -24,7 +24,7 @@
   <div class="playlistTitle">
     <span ng-hide="editing" ng-click="editing = true">{{playlistTitle}}</span>
     <form ng-show="editing" ng-submit="editing = false">
-      <input type="text" ng-model="playlistTitle" placeholder="Playlist Title" ng-required/>
+      <input type="text" ng-model="playlistTitle" placeholder="" ng-required/>
     </form>
     <div class="btn" ng-click="save()">SAVE</div>
   </div>

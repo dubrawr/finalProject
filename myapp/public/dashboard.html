@@ -5,7 +5,7 @@
 
 
 	<div>
-	<div class="create">
+	<div>
 	<a class="hand createButton" ng-click="createPlaylist()"><span id="create">CREATE NEW PLAYLIST</span></a></div><br>
 	<div class="flex-container">
 		<ul class="marginTop lsn" ng-repeat="playlist in playlists">
@@ -21,21 +21,22 @@
 				<div id="backgroundYellow" class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="bold modal-title">{{title}}</h4><span id="edit" ng-click="edit()" class="hand">Edit</span>
+						<h4 data-id="{{id}}" class="bold modal-title">{{title}}</h4><!-- <span id="edit" ng-click="edit()" class="hand">Edit</span> -->
 					</div>
 					<div id="backgroundGray" class="modal-body">
 						<p>
-							<div class="current" ng-show="!show" >
+							<div ng-show="!show" >
 								
 								<ul ng-repeat="song in songlist">
-									<li class="borderYellow hand" ng-dblclick="pause()" ng-click="play(song)" data-id="{{song.id}}"><span class="marginLeft">{{song.artists[0].name}} - {{song.name}}</span></li>
+									<li class="lsn current hand" ng-dblclick="pause()" ng-click="play(song)" data-id="{{song.id}}"><span class="marginLeft">{{song.artists[0].name}} - {{song.name}}</span></li>
 								</ul>
 							</div>
 
 						</p>
 					</div>
 					<div class="modal-footer">
-					<button type="button" class="btn btn-default" id="backgroundGray" data-dismiss="modal">Close</button>
+					
+					<button type="button" ng-click="deletePlaylist(id)" class="btn btn-default" id="backgroundGray">Delete</button>
 					</div>
 				</div>
 

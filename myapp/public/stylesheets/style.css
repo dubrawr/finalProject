@@ -1,6 +1,11 @@
 #body-display {background-color: #323232;
 font-family: Roboto, Helvetica, sans-serif;}
 
+.mixtape {
+	height: 100%;
+	margin: 0 auto;
+}
+
 a>span{color: #323232}
 .yellow{color: #e2ff88;}
 .create {
@@ -120,13 +125,7 @@ overflow: auto;
 	color: #323232;
 }
 
-.addedList {
-background-color: #323232; 
-color: #e2ff88; 
-width: 300px; 
-margin: 0 auto; 
-text-align: center;
-}
+
 
 .grid {margin-top:80px;}
 

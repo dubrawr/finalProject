@@ -5,7 +5,7 @@ angular.module('myApp')
 })
 .controller('playlistController', ['$routeParams', '$scope', '$http', '$location', 'playlistService',
 	function($routeParams, $scope, $http, $location, playlistService){
-		$scope.playlistTitle = 'Click To Change Playlist Title';
+		$scope.playlistTitle = 'Click To Rename Playlist';
 
 var currentSong = [];
 $scope.play = function(song){
