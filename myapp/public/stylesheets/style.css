@@ -3,8 +3,18 @@ font-family: Roboto, Helvetica, sans-serif;}
 
 .mixtape {
 	height: 100%;
-	margin: 0 auto;
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.resultsFound {height: 10px;}
 
 a>span{color: #323232}
 .yellow{color: #e2ff88;}

@@ -17,7 +17,7 @@ margin-left: 40px;
 background-color: #e2ff88;
 color: #323232; 
 border-radius: 10px;
-width: 459px;
+width: 400px;
 height: 80vh;
 overflow: auto;
 }
@@ -31,9 +31,10 @@ float: right;
 .addedList {
 background-color: #323232; 
 color: #e2ff88; 
-width: 300px; 
-margin: 0 auto; 
+width: 400px; 
+margin: 0;
 text-align: center;
+padding-right: 0;
 }
 
 .added {
@@ -68,8 +69,10 @@ span.plus:hover{
   margin-left: 10px;
 }
 
+ul {margin: 0; padding:0;}
+
 .resultList {
-text-align: right; padding-top: 8.5px;}
+text-align: right; padding-top: 8.5px; margin-right: 10px;}
 
 .dashboard {margin-top: 80px;
     display: -webkit-box;
@@ -113,6 +116,7 @@ text-align: center;
 }
 
 li.playlist:hover {background-color: #e2ff88; color: #323232;}
+li.resultList:hover {background-color: #323232; color: #e2ff88;}
 
 .flex-container {
   padding: 0;
