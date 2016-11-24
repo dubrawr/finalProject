@@ -98,6 +98,16 @@ border: 1px solid #e2ff88;
 margin: 10px;
 }
 
+.player {
+  background-color: #323232;
+  border-radius: 10px;
+  width: 200px;
+  padding: 1px;
+  display: inline-block;
+  float: left;
+  text-align: center;
+}
+
 li.resultList>span {margin-right: 5px;}
 li.current {height: 34px; position: relative;}
 li.current:hover, li.addedList:hover {font-weight: bold; background-color: #e2ff88; color: #323232;}
@@ -119,7 +129,7 @@ li:hover>div {display: inline-block;}
     justify-content: center;
 }
 
-
+div.btn:hover {color: #323232; background-color: #e2ff88;}
 .center {
 text-align: center;
 }

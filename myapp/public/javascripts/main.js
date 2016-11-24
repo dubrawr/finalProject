@@ -24,7 +24,12 @@ $routeProvider
     .when('/playlist/:id/edit', {
       templateUrl: '/create.html',
       controller: 'playlistController',
-      access: {restricted: true}
+      access: {restricted: false}
+    })
+    .when('/playlist:/id', {
+      templateUrl: '/playlist.html',
+      controller: 'playlistController',
+      access: {restricted: false}
     })
     .otherwise({
       redirectTo: '/'
@@ -39,6 +44,7 @@ myApp.run(function ($rootScope, $location, $route, AuthService) {
         .catch(function(response){
           $location.path('/login');
           $route.reload();
+          
         });  
       }
     });

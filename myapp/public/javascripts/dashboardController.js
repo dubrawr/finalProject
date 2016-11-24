@@ -2,6 +2,9 @@ angular.module('myApp')
 .controller('dashboardController', ['$scope', '$location', 'playlistService',
   function ($scope, $location, playlistService) {
     $scope.loggedIn = false;
+
+    var nowPlaying = '';
+
     $scope.createPlaylist = function(){
       playlistService.create()
       .then(function(response){
@@ -45,24 +48,38 @@ $scope.display = function(playlist){
 
 var currentSong = [];
 $scope.play = function(song){
-  var nowPlaying = new Audio(song.preview_url);
-  $(nowPlaying).on('ended', function(){
-    console.log('ended');
-  });
+var nowPlaying = new Audio(song.preview_url);  
+
   if (currentSong.length === 1){
     currentSong[0].pause();
     currentSong = [];
     currentSong.push(nowPlaying);
     nowPlaying.play();
   } else {
+    
     currentSong.push(nowPlaying);
     nowPlaying.play();
   }
+   
+    $(nowPlaying).on('ended', function(){
+    var i = $scope.songlist.indexOf(song);
+    i++;
+    $scope.play($scope.songlist[i]);
+
+    
+    console.log('ended');
+  });
 };
+
 $scope.pause = function(){
   currentSong[0].pause();
 };
 
+$scope.next = function(){
+  console.log(nowPlaying);
+};
+
+$scope.back = function(){};
 
 $scope.showPlaylists();
 

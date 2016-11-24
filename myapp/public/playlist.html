@@ -1,0 +1,6 @@
+<div class="added">
+<ul ui-sortable ng-model="playlist" class="lsn">
+
+      <li ng-repeat="song in playlist" class="hand addedList"><span ng-dblclick="pause()" ng-click="play(song)">{{song.artists[0].name}} - {{song.name}}</span></li>
+    </ul>
+</div>
