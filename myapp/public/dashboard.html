@@ -27,8 +27,8 @@
 						<p>
 							<div ng-show="!show" >
 								
-								<ul id="sortable" ng-repeat="song in songlist">
-									<li class="lsn current hand" ng-dblclick="pause()" ng-click="play(song)" data-id="{{song.id}}"><span class="marginLeft">{{song.artists[0].name}} - {{song.name}}</span></li>
+								<ul ng-repeat="song in songlist">
+									<li class="lsn current hand" ng-dblclick="pause()" ng-click="play(song)" data-id="{{song.id}}"><div><img src="images/play.png"></div><span class="marginLeft">{{song.artists[0].name}} - {{song.name}}</span></li>
 								</ul>
 							</div>
 

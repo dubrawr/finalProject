@@ -46,6 +46,9 @@ $scope.display = function(playlist){
 var currentSong = [];
 $scope.play = function(song){
   var nowPlaying = new Audio(song.preview_url);
+  $(nowPlaying).on('ended', function(){
+    console.log('ended');
+  });
   if (currentSong.length === 1){
     currentSong[0].pause();
     currentSong = [];

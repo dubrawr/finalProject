@@ -37,6 +37,7 @@ width: 400px;
 margin: 0;
 text-align: center;
 padding-right: 0;
+margin-bottom: 5px;
 }
 
 .added {
@@ -97,7 +98,16 @@ border: 1px solid #e2ff88;
 margin: 10px;
 }
 
-li.current:hover {background-color: #e2ff88; color: #323232;}
+li.current {height: 34px; position: relative;}
+li.current:hover, li.addedList:hover {font-weight: bold; background-color: #e2ff88; color: #323232;}
+
+/*li.current:hover:after {
+  content:url(../images/play.png);
+  display:block;
+}
+*/
+li>div {display: none;}
+li:hover>div {display: inline-block;}
 
 .mixtape {
   height: 100%;
