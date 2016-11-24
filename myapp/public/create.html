@@ -12,7 +12,7 @@
   <div id="searchResults" class="results" ng-if="resultsFound">
 
     <ul class="lsn" ng-repeat="result in results">
-      <li class="hand resultList" data-id="{{result.id}}" ng-click="addSong(result)">{{result.artists[0].name}} - {{result.name}}</li>
+      <li class="hand resultList" data-id="{{result.id}}" ng-click="addSong(result)"><span>{{result.artists[0].name}} - {{result.name}}</span><div><img src="images/add.png"></div></li>
     </ul>
   </div>
 
