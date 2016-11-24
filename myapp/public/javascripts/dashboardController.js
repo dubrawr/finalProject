@@ -3,7 +3,7 @@ angular.module('myApp')
   function ($scope, $location, playlistService) {
     $scope.loggedIn = false;
 
-    var nowPlaying = '';
+
 
     $scope.createPlaylist = function(){
       playlistService.create()
@@ -60,7 +60,7 @@ var nowPlaying = new Audio(song.preview_url);
     currentSong.push(nowPlaying);
     nowPlaying.play();
   }
-   
+   // this is where the magic happens.
     $(nowPlaying).on('ended', function(){
     var i = $scope.songlist.indexOf(song);
     i++;
@@ -76,7 +76,16 @@ $scope.pause = function(){
 };
 
 $scope.next = function(){
-  console.log(nowPlaying);
+  console.log(currentSong[0].src);
+  var current = currentSong[0].src;
+  var result = $scope.songlist.filter(function(song){
+    return song.preview_url == current;
+  });
+  console.log(result);
+  var next = $scope.songlist.indexOf(result[0]);
+  console.log(next);
+  next++;
+  $scope.play($scope.songlist[next]);
 };
 
 $scope.back = function(){};
