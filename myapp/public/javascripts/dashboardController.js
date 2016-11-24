@@ -88,7 +88,17 @@ $scope.next = function(){
   $scope.play($scope.songlist[next]);
 };
 
-$scope.back = function(){};
+$scope.back = function(){
+  var current = currentSong[0].src;
+  var result = $scope.songlist.filter(function(song){
+    return song.preview_url == current;
+  });
+  console.log(result);
+  var previous = $scope.songlist.indexOf(result[0]);
+  console.log(previous);
+  previous--;
+  $scope.play($scope.songlist[previous]);
+};
 
 $scope.showPlaylists();
 
