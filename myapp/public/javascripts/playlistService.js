@@ -26,6 +26,13 @@ angular.module('myApp')
         url: '/playlist/' + data.id,
         data: data
       });
+    },
+    share: function(data){
+      return $http({
+        method: 'GET',
+        url: '/playlist/' + data.id,
+        data: data
+      });
     }
   };
 }]);

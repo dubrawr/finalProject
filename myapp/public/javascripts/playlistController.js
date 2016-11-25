@@ -75,10 +75,11 @@ $scope.pause = function(){
 			}
 		};
 
-$scope.share = function(playlist){
-	console.log(playlist);
-	console.log($routeParams.id);
+$scope.share = function(){
+
 	$location.path('/playlist/' + $routeParams.id );
 };
+
+
 
 }]);

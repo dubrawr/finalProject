@@ -53,6 +53,13 @@ router.get('/', authenticationRequired, function(request, response){
 		});
 });
 
+router.get('/:id', function(request, response){
+	Playlist.find({_id: request.params.id}, function(err, results){
+		console.log(results);
+		response.json(results);
+	});
+});
+
 router.delete('/:id', authenticationRequired, function(request, response){
 	console.log('hi');
 	console.log(request.params.id);

@@ -3,10 +3,15 @@ var myApp = angular.module('myApp', ['ngRoute', 'ui.sortable']);
 myApp.config(function ($routeProvider){
 $routeProvider
 	.when('/', {
-		templateUrl: '/dashboard.html',
-		controller: 'dashboardController',
-    access: {restricted: true}
+		templateUrl: '/home.html',
+		controller: 'homeController',
+    access: {restricted: false}
 	})
+  .when('/dashboard', {
+    templateUrl: '/dashboard.html',
+    controller: 'dashboardController',
+    access: {restricted: true}
+  })
 	.when('/login', {
       templateUrl: '/login.html',
       controller: 'loginController',
@@ -24,11 +29,11 @@ $routeProvider
     .when('/playlist/:id/edit', {
       templateUrl: '/create.html',
       controller: 'playlistController',
-      access: {restricted: false}
+      access: {restricted: true}
     })
-    .when('/playlist:/id', {
+    .when('/playlist/:id', {
       templateUrl: '/playlist.html',
-      controller: 'playlistController',
+      controller: 'shareController',
       access: {restricted: false}
     })
     .otherwise({

@@ -4,7 +4,8 @@
   flex-direction: column;
   flex-wrap: wrap;
 }
-
+.about {text-align: left; font-weight: bold;}
+#test{color: black;}
 #create {color: #323232; background-color: #e2ff88; padding: 10px; border-radius: 10px;}
 .createButton {
 font-size: 20px;

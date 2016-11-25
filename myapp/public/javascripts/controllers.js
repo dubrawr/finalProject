@@ -12,7 +12,7 @@ angular.module('myApp').controller('loginController',
       AuthService.login($scope.loginForm.username, $scope.loginForm.password)
         // handle success
         .then(function () {
-          $location.path('/');
+          $location.path('/dashboard');
           $scope.disabled = false;
           $scope.loginForm = {};
         })
@@ -65,7 +65,7 @@ angular.module('myApp').controller('registerController',
         // handle error
         .catch(function () {
           $scope.error = true;
-          $scope.errorMessage = "Sorry there was an error!";
+          $scope.errorMessage = "Sorry, that username is taken!";
           $scope.disabled = false;
           $scope.registerForm = {};
         });
