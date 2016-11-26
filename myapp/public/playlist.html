@@ -1,7 +1,18 @@
+<div class="mixtape">
+<div class="center">
 <div ng-init="shared()">
-<p>{{title}}</p>
+<h1>{{title}}</h1>
+<div class="player2">
+						<img ng-click="back()" src="images/back.png">
+						<img ng-click="play(song)" src="images/pplay.png">
+						<img ng-click="pause()" src="images/stop.png">
+						<img ng-click="next()" src="images/forward.png">
+					</div>
+<div>
 <ul class="lsn">
-	<li id="test" ng-repeat="song in playlist" class="hand addedList"><span ng-dblclick="pause()" ng-click="play(song)">{{song.artists[0].name}} - {{song.name}}</span></li>
+	<li id="backgroundYellow" ng-repeat="song in playlist" class="current hand"><div><img src="images/play.png"></div><span ng-dblclick="pause()" ng-click="play(song)">{{song.artists[0].name}} - {{song.name}}</span></li>
 </ul>
-
+</div>
+</div>
+</div>
 </div>

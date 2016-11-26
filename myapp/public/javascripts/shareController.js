@@ -13,4 +13,57 @@ angular.module('myApp')
 	});
 };
 
+var currentSong = [];
+$scope.play = function(song){
+var nowPlaying = new Audio(song.preview_url);  
+
+  if (currentSong.length === 1){
+    currentSong[0].pause();
+    currentSong = [];
+    currentSong.push(nowPlaying);
+    nowPlaying.play();
+  } else {
+    
+    currentSong.push(nowPlaying);
+    nowPlaying.play();
+  }
+   // this is where the magic happens.
+    $(nowPlaying).on('ended', function(){
+    var i = $scope.playlist.indexOf(song);
+    i++;
+    $scope.play($scope.playlist[i]);
+
+    
+    console.log('ended');
+  });
+};
+
+$scope.pause = function(){
+  currentSong[0].pause();
+};
+
+$scope.next = function(){
+  console.log(currentSong[0].src);
+  var current = currentSong[0].src;
+  var result = $scope.playlist.filter(function(song){
+    return song.preview_url == current;
+  });
+  console.log(result);
+  var next = $scope.playlist.indexOf(result[0]);
+  console.log(next);
+  next++;
+  $scope.play($scope.playlist[next]);
+};
+
+$scope.back = function(){
+  var current = currentSong[0].src;
+  var result = $scope.playlist.filter(function(song){
+    return song.preview_url == current;
+  });
+  console.log(result);
+  var previous = $scope.playlist.indexOf(result[0]);
+  console.log(previous);
+  previous--;
+  $scope.play($scope.playlist[previous]);
+};
   }]);
