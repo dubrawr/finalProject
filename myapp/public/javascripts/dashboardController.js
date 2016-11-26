@@ -100,6 +100,16 @@ $scope.back = function(){
   $scope.play($scope.songlist[previous]);
 };
 
+$scope.playAll = function(){
+  if (currentSong.length === 1){
+    currentSong[0].play();
+  } else {
+  var firstSong = $scope.songlist[0];
+  console.log(firstSong);
+  $scope.play(firstSong);
+  }
+};
+
 $scope.showPlaylists();
 
 

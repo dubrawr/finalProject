@@ -66,4 +66,16 @@ $scope.back = function(){
   previous--;
   $scope.play($scope.playlist[previous]);
 };
-  }]);
+
+$scope.playAll = function(){
+	if (currentSong.length === 1){
+    currentSong[0].play();
+  } else {
+	var firstSong = $scope.playlist[0];
+	console.log(firstSong);
+	$scope.play(firstSong);
+	}
+};
+
+
+ }]);
