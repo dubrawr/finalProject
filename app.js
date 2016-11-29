@@ -9,12 +9,13 @@ var mongoose = require('mongoose');
 var hash = require('bcrypt-nodejs');
 var passport = require('passport');
 var localStrategy = require('passport-local' ).Strategy;
-
+var config = require('../config.js');
 
 
 
 // mongoose
-mongoose.connect('mongodb://localhost/finalProject');
+// mongoose.connect('mongodb://localhost/finalProject');
+mongoose.connect(config.DATABASE_URL);
 
 var app = express();
 
