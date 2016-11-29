@@ -1,6 +1,6 @@
 angular.module('myApp')
-.controller('dashboardController', ['$scope', '$location', 'playlistService',
-  function ($scope, $location, playlistService) {
+.controller('dashboardController', ['$scope', '$location', 'playlistService','$timeout',
+  function ($scope, $location, playlistService, $timeout) {
     $scope.loggedIn = false;
 
 
@@ -43,6 +43,7 @@ $scope.display = function(playlist){
   $scope.songlist = [];
   $scope.songlist = playlist.songs; 
   console.log($scope.songlist);
+  console.log($scope.id);
 };
 
 
@@ -112,5 +113,11 @@ $scope.playAll = function(){
 
 $scope.showPlaylists();
 
+
+
+$scope.share = function(){
+      $('#myModal').modal('toggle');
+      $timeout(function(){$location.path('/playlist/' + $scope.id);}, 5000);
+    };
 
 }]);

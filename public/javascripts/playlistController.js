@@ -76,7 +76,7 @@ $scope.pause = function(){
 		};
 
 $scope.share = function(){
-
+	$scope.save();
 	$location.path('/playlist/' + $routeParams.id );
 };
 

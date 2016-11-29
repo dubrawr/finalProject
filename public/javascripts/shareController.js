@@ -2,6 +2,8 @@ angular.module('myApp')
 .controller('shareController', ['$routeParams', '$scope', '$location', 'playlistService',
   function ($routeParams, $scope, $location, playlistService) {
 
+
+
   	$scope.shared = function(){
 	console.log('shared is firing');
 	var data = {id: $routeParams.id};
