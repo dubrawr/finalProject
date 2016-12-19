@@ -14,7 +14,7 @@ var config = require('./config.js');
 
 
 // mongoose
-// mongoose.connect('mongodb://localhost/finalProject');
+//mongoose.connect('mongodb://localhost/finalProject');
 mongoose.connect(config.DATABASE_URL);
 
 var app = express();

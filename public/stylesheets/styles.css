@@ -13,7 +13,7 @@ text-align: center;
 margin-left: 40px;
 }
 
-
+#start{margin-top: 10px; font-size: 25px; font-weight: bold; color:#323232; background-color:#e2ff88;}
 .results {
 background-color: #e2ff88;
 color: #323232; 
