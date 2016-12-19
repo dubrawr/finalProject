@@ -2,12 +2,11 @@
 <html lang="en" ng-app="myApp">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
-<!--   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> -->
+	<title>mixtape</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link href="./stylesheets/styles.css" rel="stylesheet">
   <link href="bootswatch/yeti/bootstrap.min.css" rel="stylesheet">
 
-  <!-- <link href="ng-sortable/dist/ng-sortable.css" rel="stylesheet"> -->
 
 </head>
 <body id="body-display" class="HolyGrail">
@@ -18,22 +17,13 @@
     <img id="smLogo" src="./images/sm-mixtape.png">
     <div>
       <a href="#/"><span id="backgroundYellow">HOME</span></a><br>
-    <!--   <a href="#/about"><span id="backgroundYellow">ABOUT</span></a><br> -->
       <a href="#/dashboard"><span id="backgroundYellow">DASHBOARD</span></a><br>
       <a href="#/login"><span id="backgroundYellow">LOGIN</span></a><br>
       <a href="#/register"><span id="backgroundYellow">REGISTER</span></a><br>
       <a ng-controller="logoutController" href="#/" ng-click="logout()"><span id="backgroundYellow">LOGOUT</span></a>
 </div>
     </div>
-    <!-- not sure why this isn't working correctly -->
-  <!--   <div ng-init="loggedIn = false" ng-controller="dashboardController">
 
-      <p>Playlists</p>
-      <ul ng-if="loggedIn" ng-repeat="playlist in playlists">
-        <li data-id="{{playlist._id}}">{{playlist.title}}</li>
-      </ul>
-
-    </div> -->
   </div>
 
   <div class="HolyGrail-content">

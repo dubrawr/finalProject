@@ -5,12 +5,12 @@ A MEAN stack app that uses the Spotify API, allowing users to create music playl
 Songs are currently 30 second sound previews.
 
 Tech Usage:
-Mongo DB
-Express
-Angular
-Node JS
-Spotify API
-Bootstrap
+Mongo DB,
+Express,
+Angular,
+Node JS,
+Spotify API,
+Bootstrap,
 Jquery
 
 Upcoming Features: Login with Spotify Account
